@@ -1,0 +1,36 @@
+body{
+    font-family: tahoma;
+    font-size: 13px;
+    text-align: left;
+}
+
+table{
+    border-collapse: separate;
+    border-spacing: 0px 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeff2;
+}
+
+tr:nth-child(odd) {
+   background-color: #dfe1e7;
+}
+
+table tr td{
+    padding: 5px;
+}
+
+table tr th{
+    padding: 5px;
+    color: white;
+    background-color: #687291;
+}
+
+.mid {
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}

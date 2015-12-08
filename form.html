@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="generator" content="HTML Tidy for Linux (vers 25 March 2009), see www.w3.org" />
+        <title>Course creation form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="form.css" />
+        <script type="text/javascript">
+        //<![CDATA[
+            function runForm() {
+                if(disciplineName() === false || codeName() === false){
+                    error();
+                    return false
+                }
+                
+                else if(titleName() === false || levelName() === false){
+                    error();
+                    return false;
+                }
+                
+                else if(semesterName() === false || creditName() === false){
+                    error();
+                    return false;
+                };
+            }
+            
+            function disciplineName(){
+                var discipline = document.forms["myForm"]["disc"].value;
+                
+                if (discipline.length < 4 || discipline === null || !isNaN(discipline)) {
+                    document.forms["myForm"]["disc"].style.backgroundColor = "red";
+                    //return false;
+                };
+            }
+            
+            function codeName(){
+                var code = document.forms["myForm"]["cd"].value;
+                
+                if (code.length < 4 || isNaN(code)) {
+                    document.forms["myForm"]["cd"].style.backgroundColor = "red";
+                    return false;
+                };   
+            }
+            
+            function titleName(){
+                var title = document.forms["myForm"]["tit"].value;
+                
+                if(title === null || title === ""){
+                    document.forms["myForm"]["tit"].style.backgroundColor = "red";
+                    return false;
+                };
+            }
+            
+            function levelName(){
+                var level = document.forms["myForm"]["lev"].value;
+                
+                if(level === null || level === "" || isNaN(level)){
+                    document.forms["myForm"]["lev"].style.backgroundColor = "red";
+                    return false;
+                };
+            }
+            
+            function semesterName(){
+                var semester = document.forms["myForm"]["sem"].value;
+                
+                if(semester === null || semester === "" || isNaN(semester)){
+                    document.forms["myForm"]["sem"].style.backgroundColor = "red";
+                    return false;
+                };
+            }
+            
+            function creditName(){
+                var credit = document.forms["myForm"]["cred"].value;
+                
+                if(credit === null || credit === "" || isNaN(credit)){
+                    document.forms["myForm"]["cred"].style.backgroundColor = "red";
+                    return false;
+                };
+            }
+            
+            function error(){
+                alert("Please take a look at the form again!");
+            }
+        //]]>
+        </script>
+    </head>
+    <body>
+        <form name="myForm" action="form.php" onsubmit="return runForm()" method="post" id="myForm">
+            <table>
+                <tr>
+                    <td>Course Discipline:</td>
+                    <td><input type="text" name="disc" /></td>
+                </tr>
+                <tr>
+                    <td>Course Code:</td>
+                    <td><input type="text" name="cd" /></td>
+                </tr>
+                <tr>
+                    <td>Course Title:</td>
+                    <td><input type="text" name="tit" /></td>
+                </tr>
+                <tr>
+                    <td>Level:</td>
+                    <td><input type="text" name="lev" /></td>
+                </tr>
+                <tr>
+                    <td>Semester:</td>
+                    <td><input type="text" name="sem" /></td>
+                </tr>
+                <tr>
+                    <td>Credits:</td>
+                    <td><input type="text" name="cred" /></td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" value="6eb6ac241942dc7226aeb" name="hide" /></td>
+                    </tr>
+                <tr>
+                    <td colspan="2" align="right"><input type="submit" value="Submit" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

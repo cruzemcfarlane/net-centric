@@ -1,0 +1,30 @@
+body{
+    font-family: tahoma;
+    font-size: 13px;
+    text-align: left;
+    background-color: #eeeff2;
+}
+
+table{
+    border-spacing: 1px;
+    border-style: solid;
+    border-color: #d0d0ff;
+    border-width: 10px;
+    padding: 20px;
+}
+
+table tr td{
+    padding: 5px;
+}
+
+table tr th{
+    padding: 5px;
+}
+
+table tr td hr{
+    height: 2px;
+}
+
+.mid {
+    text-align: center;
+}
